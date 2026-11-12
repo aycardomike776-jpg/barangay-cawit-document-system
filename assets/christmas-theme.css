@@ -1,0 +1,155 @@
+
+/* =====================================
+   BARANGAY CAWIT
+   WINTER WONDERLAND CHRISTMAS THEME
+===================================== */
+
+:root {
+    --winter-blue: #dff3ff;
+    --ice-blue: #effaff;
+    --deep-blue: #174b70;
+    --sky-blue: #65bce8;
+    --snow-white: #ffffff;
+    --silver: #c8dce8;
+    --christmas-red: #c9364b;
+    --christmas-green: #25866b;
+}
+
+body {
+    background: linear-gradient(
+        135deg,
+        #f4fbff,
+        #e4f5ff,
+        #ffffff
+    );
+    color: #263b4a;
+}
+
+/* Main cards and panels */
+.card,
+.dashboard-card,
+.stat-card,
+.content-card,
+.panel {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #d8edf8;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(63, 133, 170, 0.10);
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: var(--deep-blue);
+}
+
+/* Buttons */
+button,
+.btn,
+input[type="submit"] {
+    transition: all 0.25s ease;
+    border-radius: 9px;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(55, 145, 190, 0.22);
+}
+
+/* Tables */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: #dff3ff;
+    color: var(--deep-blue);
+}
+
+/* Christmas banner */
+.christmas-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 24px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    color: #174b70;
+    background: linear-gradient(120deg, #dff4ff, #ffffff, #c9ebff);
+    border: 1px solid #c6e7f7;
+    box-shadow: 0 5px 18px rgba(75, 151, 190, 0.13);
+}
+
+/* Christmas lights */
+.christmas-lights {
+    height: 13px;
+    margin-bottom: 18px;
+    border-top: 3px solid #8aaebe;
+    background:
+        radial-gradient(circle, #e94c5d 4px, transparent 5px)
+            0 0 / 55px 13px repeat-x,
+        radial-gradient(circle, #f5ca58 4px, transparent 5px)
+            18px 0 / 55px 13px repeat-x,
+        radial-gradient(circle, #48a981 4px, transparent 5px)
+            36px 0 / 55px 13px repeat-x;
+}
+
+/* Floating snowflakes */
+.snowflake {
+    position: fixed;
+    top: -30px;
+    z-index: 9999;
+    color: #ffffff;
+    text-shadow: 0 0 5px #79bfe5;
+    pointer-events: none;
+    animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.2;
+    }
+}
+
+/* Gentle Christmas button animation */
+@keyframes winter-glow {
+    0%, 100% {
+        box-shadow: 0 0 0 rgba(101, 188, 232, 0);
+    }
+    50% {
+        box-shadow: 0 0 12px rgba(101, 188, 232, 0.35);
+    }
+}
+
+.christmas-button {
+    animation: winter-glow 3s ease-in-out infinite;
+}
+
+/* Decorative Christmas tree */
+.christmas-tree {
+    font-size: 30px;
+    display: inline-block;
+    animation: tree-sway 3s ease-in-out infinite;
+}
+
+@keyframes tree-sway {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

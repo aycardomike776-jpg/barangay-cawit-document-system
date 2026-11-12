@@ -1,0 +1,22 @@
+# Local database configuration
+/config/database.php
+
+# Environment files
+.env
+.env.*
+
+# Uploads folder
+/uploads/*
+!/uploads/.gitkeep
+
+# Temporary and log files
+*.log
+*.tmp
+*.bak
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Test database connection file
+/test_db.php
